@@ -7,6 +7,6 @@ public class Main {
         //lista1.numero4();
         //lista1.System.out.println(numero5(0));
         //lista1.numero6();
-        lista1.numero8();
+        //lista1.numero8();
     }
 }

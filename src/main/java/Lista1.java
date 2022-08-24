@@ -32,9 +32,7 @@ public class Lista1 {
     public void numero3(){
         //System.out.println(1000 * 999 / 2);
         int soma = 0;
-        for (int i = 1; i < 1000; i++){
-            soma += i;
-        }
+        for (int i = 1; i < 1000; i++) soma += i;
         System.out.println("A soma de 1 a 999 vale: " + soma);
     }
     public void numero4(){
@@ -62,7 +60,7 @@ public class Lista1 {
     }
     public void numero7(){
         int[] dados = new int[4];
-        int lido = 0;
+        int lido;
         Scanner leitor = new Scanner(System.in);
         while (true){
             System.out.println("Insira a nota: ");
@@ -73,9 +71,7 @@ public class Lista1 {
             else if (lido <= 75) dados[2]++;
             else dados[3]++;
         }
-        System.out.println("Pessimas: " + dados[0] +
-                "\nRuins: " + dados[1] + "\nBoas: " + dados[2] +
-                "\nOtimas: " + dados[3]);
+        System.out.println("Pessimas: " + dados[0] + "\nRuins: " + dados[1] + "\nBoas: " + dados[2] + "\nOtimas: " + dados[3]);
     }
     public void numero8(){
         Scanner scanner = new Scanner(System.in);
@@ -91,18 +87,15 @@ public class Lista1 {
                 matriz[i][j] = valor;
                 soma += valor;
                 if (j == i) diagPrin += valor;
-                if (j + i == ordem - 1)
-                    diagSec += valor;
+                if (j + i == ordem - 1) diagSec += valor;
             }
-            if (valorMatriz != 0 && soma != valorMatriz)
-                matrizQuadrada = false;
+            if (valorMatriz != 0 && soma != valorMatriz) matrizQuadrada = false;
             valorMatriz = soma;
             soma = 0;
         }
         if (matrizQuadrada && diagPrin == valorMatriz && diagSec == valorMatriz){
             for (int i = 0; i < ordem; i++) {
-                for (int j = 0; j < ordem; j++)
-                    soma += matriz[j][i];
+                for (int j = 0; j < ordem; j++) soma += matriz[j][i];
                 if (soma != valorMatriz) {
                     matrizQuadrada = false;
                     break;
