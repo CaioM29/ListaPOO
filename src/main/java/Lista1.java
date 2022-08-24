@@ -99,19 +99,17 @@ public class Lista1 {
             valorMatriz = soma;
             soma = 0;
         }
-        if (matrizQuadrada){
-            if (diagPrin == valorMatriz && diagSec == valorMatriz) {
-                for (int i = 0; i < ordem; i++) {
-                    for (int j = 0; j < ordem; j++)
-                        soma += matriz[j][i];
-                    if (soma != valorMatriz) {
-                        matrizQuadrada = false;
-                        break;
-                    }
-                    soma = 0;
+        if (matrizQuadrada && diagPrin == valorMatriz && diagSec == valorMatriz){
+            for (int i = 0; i < ordem; i++) {
+                for (int j = 0; j < ordem; j++)
+                    soma += matriz[j][i];
+                if (soma != valorMatriz) {
+                    matrizQuadrada = false;
+                    break;
                 }
-            } else matrizQuadrada = false;
-        }
+                soma = 0;
+            }
+        } else matrizQuadrada = false;
         if (matrizQuadrada) System.out.println("\nA matriz é um quadrado mágico");
         else System.out.println("\nA matriz não é quadrado mágico");
     }
